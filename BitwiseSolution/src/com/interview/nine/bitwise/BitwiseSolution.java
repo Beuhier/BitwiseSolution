@@ -5,24 +5,23 @@ import java.util.Arrays;
 class Bitwise{
 	
 	public static void main(String[] args){
-		Bitwise bt = new Bitwise();
-		bt.testProgram();
+		testProgram();
 	}
 	
-	public void testProgram() {
+	public static void testProgram() {
 		int a [] = {1,2,3,4,5}; int b [] = {11,12,13,14,15};
 		   System.out.println("Original Array A" + Arrays.toString(a));
 		   System.out.println("Original Array B" + Arrays.toString(b));
 		encodeArray(a, b, 5);
 	}
 	
-	int encodeInteger(int x, int n){
+	static int encodeInteger(int x, int n){
 		n = n<<(1<<(1<<(1<<1)));
 		x = x | n;
 		return x;
 	}
 
-    void encodeArray(int [] A, int [] B, int n){
+	static void encodeArray(int [] A, int [] B, int n){
 		for(int i=0;i<n;i++) {
     	    A[i] = encodeInteger(A[i], B[i]);
 		}
@@ -30,7 +29,7 @@ class Bitwise{
 		decodeArray(A,n);
 	}
 	
-	void decodeArray(int [] originalArray, int count_of_elements_in_array) {
+	static void decodeArray(int [] originalArray, int count_of_elements_in_array) {
 		final int arrayDecoder = 0b00000000000000001111111111111111;
 		int new_a[] = new int[count_of_elements_in_array], new_b[] = new int[count_of_elements_in_array] , a, select;
 	    
