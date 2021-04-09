@@ -2,10 +2,10 @@ package com.interview.nine.bitwise;
 
 import java.util.Arrays;
 
-abstract class Bitwise{
+public class BitwiseSolution{
 	
 	public static void main(String[] args){
-		//testProgram();
+		
 	}
 	
 //	public static void testProgram() {
@@ -21,7 +21,7 @@ abstract class Bitwise{
 		return x;
 	}
 
-	static int [] encodeArray(int [] A, int [] B, int n){
+	public static int [] encodeArray(int [] A, int [] B, int n){
 		for(int i=0;i<n;i++) {
     	    A[i] = encodeInteger(A[i], B[i]);
 		}
