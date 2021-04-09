@@ -1,9 +1,5 @@
 package com.interview.nine.bitwise.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-import java.util.Arrays;
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
